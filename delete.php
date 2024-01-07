@@ -14,5 +14,5 @@ if (isset($_GET["id"])) {
     $connection->query($sql);
 }
 
-header("location: /myshop/index.php");
+header("location: /php-crud/index.php");
 exit;

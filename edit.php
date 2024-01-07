@@ -20,7 +20,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'GET') {
     // GET method: Show the data of the client
 
     if (!isset($_GET["id"])) {
-        header("location: /myshop/index.php");
+        header("location: /php-crud/index.php");
         exit;
     }
 
@@ -33,7 +33,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'GET') {
         $result = $connection->query($sql);
         $row = $result->fetch_assoc();
     } catch (Exception $e) {
-        header("location: /myshop/index.php");
+        header("location: /php-crud/index.php");
         exit;
     }
 
@@ -69,7 +69,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'GET') {
 
         $successMessage = "Client updated correctly";
 
-        header("location: /myshop/index.php");
+        header("location: /php-crud/index.php");
         exit;
     } while (false);
 }
@@ -148,7 +148,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'GET') {
                     <button type="submit" class="btn btn-primary">Submit</button>
                 </div>
                 <div class="col-sm-3 d-grid">
-                    <a class="btn btn-outline-primary" href="/myshop/index.php" role="button">Cancel</a>
+                    <a class="btn btn-outline-primary" href="/php-crud/index.php" role="button">Cancel</a>
                 </div>
             </div>
         </form>
